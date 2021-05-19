@@ -43,8 +43,38 @@
 						<div class="image">
 							<img src="logo-D-123 2.jpg" alt="" />
 						</div> -->
-						
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/4R7ch-anxis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
+						<!-- VideoPlayerApp script - should only be once per page! -->
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://videoplayerapp.net/assets/js/video-player/lottie/lottie_svg.min.js"></script>
+<script src="https://videoplayerapp.net/assets/js/video-player/videoplayerapp.min.js?v=0.4.31"></script>
+<script>
+    var videoPlayerApp = new VideoPlayerApp({
+        targetClassName: 'videoplayerapp',
+        autoPlay: false,
+        loop: false,
+        skin: '',
+        textPaused: 'Paused',
+        textEnded: 'Ended',
+        playImageUrl: 'https://videoplayerapp.net/assets/js/video-player/play-circle.png',
+        lottieFileUrl: 'https://videoplayerapp.net/assets/js/video-player/lottie/01.json',
+        lotteAnimationElementColors: ['#c3aed6', '#8675a9', '#8675a9'],
+        lottieAnimationColorsMapping: [0,1],
+        autoPlayShakeAnimation: false,
+        colorBars: '#c3aed6',
+        colorPlayButton: '#c3aed6',
+        colorProgressBarTotal: 'rgba(255,255,255,0.65)',
+        colorProgressBar: '#8675a9',
+        colorOverlayText: 'rgba(0,0,0,0.75)',
+        watermarkSize: 150,
+        remoteBaseUrl: 'https://videoplayerapp.net/assets/js/video-player/'
+    });
+</script>
+
+<!-- This code is for the current video - there may be several videos on the page -->
+<div style="position: relative; overflow: hidden; padding-top: 56.25%;">
+    <div class="videoplayerapp" data-youtube-id="4R7ch-anxis" data-position="absolute" data-height="100%"></div>
+</div>
+											
 						</section>
 				<!-- Three -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
