@@ -48,6 +48,11 @@
 <script src="https://videoplayerapp.net/assets/js/video-player/lottie/lottie_svg.min.js"></script>
 <script src="https://videoplayerapp.net/assets/js/video-player/videoplayerapp.min.js?v=0.4.31"></script>
 <script>
+<!-- VideoPlayerApp script - should only be once per page! -->
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://videoplayerapp.net/assets/js/video-player/lottie/lottie_svg.min.js"></script>
+<script src="https://videoplayerapp.net/assets/js/video-player/videoplayerapp.min.js?v=0.4.33"></script>
+<script>
     var videoPlayerApp = new VideoPlayerApp({
         targetClassName: 'videoplayerapp',
         autoPlay: false,
@@ -67,6 +72,14 @@
         colorOverlayText: 'rgba(0,0,0,0.75)',
         watermarkSize: 150,
         remoteBaseUrl: 'https://videoplayerapp.net/assets/js/video-player/'
+    });
+</script>
+
+<!-- This code is for the current video - there may be several videos on the page -->
+<div style="position: relative; overflow: hidden; padding-top: 56.25%;">
+    <div class="videoplayerapp" data-youtube-id="4R7ch-anxis" data-position="absolute" data-height="100%"></div>
+</div>
+
     });
 </script>
 
